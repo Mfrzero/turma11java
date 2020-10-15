@@ -12,11 +12,14 @@ public class Ex04 {
 		int[][] matriz1 = new int[2][2];
 		int[][] matriz2 = new int[2][2];
 		char opc = ' ';
+		int soma1 = 0 , soma2 = 0, total = 0, subtrai1 = 0, subtrai2 = 0;
 		
 		for (int i = 0; i < matriz1.length; i++) {
 			for (int j = 0; j < matriz1.length; j++) {
 				System.out.println("Digite um número para matriz 1 : ");
 				matriz1[i][j] = sc.nextInt();
+				soma1 += matriz1[i][j];
+				subtrai1 +=  matriz1[i][j];
 			}
 		}
 		
@@ -24,6 +27,8 @@ public class Ex04 {
 			for (int j = 0; j < matriz2.length; j++) {
 				System.out.println("Digite um número para matriz 2 : ");
 				matriz2[i][j] = sc.nextInt();
+				soma2 += matriz2[i][j];
+				subtrai2 +=  matriz2[i][j];
 			}
 		}
 		
@@ -38,27 +43,13 @@ public class Ex04 {
 		
 		switch (opc) {
 		case '1': {
-			int[][] matriz3 = new int[2][2];
-			int soma = 0;
-			for (int i = 0; i < matriz3.length; i++) {
-				for (int j = 0; j < matriz3.length; j++) {
-					soma= matriz1[i][j] + matriz2[i][j];
-				}
-			}
-			
-			System.out.println("Soma das matrizes: " + soma);
+			total = soma1 + soma2;	
+			System.out.println("Soma das matrizes: " + total);
 			break;
 		}
 		case '2': {
-			int[][] matriz3 = new int[2][2];
-			int subtrai = 0;
-			for (int i = 0; i < matriz3.length; i++) {
-				for (int j = 0; j < matriz3.length; j++) {
-					subtrai = matriz1[i][j] - matriz2[i][j];
-				}
-			}
-			
-			System.out.println("Subtração das matrizes: " + subtrai);
+			total = subtrai1 - subtrai2;	
+			System.out.println("Subtração das matrizes: " + total);
 			break;
 				}
 		case '3': {
