@@ -1,13 +1,13 @@
 package prjBanco;
 
-public class ContaEspecial extends ContaCorrente {
+public class ContaPoupanca extends ContaBancaria {
 
-	double limite = 0.02;
-	// selic 2%
+	double juros = 0.0075;
+	double corrMonetaria = 0.01;
+	int mesAniversario;
 
-	public void calculaJuros(double valor) {
-		valor *= limite;
-		System.out.println("Juros de 2% R$" + valor);
+	public void aniversarioMes() {
+
 	}
 
 	public void mostraOpcoes() {
@@ -18,10 +18,8 @@ public class ContaEspecial extends ContaCorrente {
 		System.out.println("2 - Emitir Extrato");
 		System.out.println("3 - Debitar");
 		System.out.println("4 - Creditar");
-		System.out.println("5 - Pedir talão de cheque");
-		System.out.println("6 - Calcular Juros");
+		System.out.println("5 - Mes de aniversario");
 		System.out.println("0 - Sair");
 		System.out.println("-----------------------------------\n");
 	}
-
 }
